@@ -1,0 +1,260 @@
+@import "tailwindcss";
+
+:root {
+  /* ClubCaddy Design System Colors (default) */
+  --color-primary: #01941a;
+  --color-secondary: #04aa6d;
+  --color-accent: #0d9488;
+  --color-background: #ffffff;
+  --color-background-alt: #F5FFFF;
+  --color-text: #1a202c;
+  --color-text-muted: #4a5568;
+  --color-text-light: #718096;
+
+  /* NWW Theme Colors */
+  --nww-primary: #B163FF;
+  --nww-primary-dark: #9B4DE0;
+  --nww-text: #0f172a;
+  --nww-text-muted: #475569;
+  --nww-background: #ffffff;
+  --nww-background-alt: #faf5ff;
+
+  /* Shadows */
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 8px 32px rgba(0, 0, 0, 0.16);
+
+  /* Fonts */
+  --font-heading: var(--font-montserrat), system-ui, sans-serif;
+  --font-body: var(--font-source-sans), system-ui, sans-serif;
+
+  /* Spacing */
+  --section-padding-y: 5rem;
+  --section-padding-x: 1.5rem;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+@theme inline {
+  /* Colors */
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-background: var(--color-background);
+  --color-background-alt: var(--color-background-alt);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-light: var(--color-text-light);
+
+  /* NWW Colors */
+  --color-nww-primary: var(--nww-primary);
+  --color-nww-primary-dark: var(--nww-primary-dark);
+  --color-nww-text: var(--nww-text);
+  --color-nww-text-muted: var(--nww-text-muted);
+  --color-nww-background: var(--nww-background);
+  --color-nww-background-alt: var(--nww-background-alt);
+
+  /* Shadows */
+  --shadow-card: var(--shadow-card);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+
+  /* Fonts */
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+}
+
+/* NWW Theme class */
+.theme-nww {
+  --color-primary: var(--nww-primary);
+  --color-secondary: var(--nww-primary-dark);
+  --color-text: var(--nww-text);
+  --color-text-muted: var(--nww-text-muted);
+  --color-background: var(--nww-background);
+  --color-background-alt: var(--nww-background-alt);
+}
+
+/* ClubCaddy Theme class */
+.theme-clubcaddy {
+  --color-primary: #01941a;
+  --color-secondary: #04aa6d;
+  --color-accent: #0d9488;
+  --color-background: #ffffff;
+  --color-background-alt: #F5FFFF;
+  --color-text: #1a202c;
+  --color-text-muted: #4a5568;
+  --color-text-light: #718096;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-to-content:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 1rem 2rem;
+  background: var(--color-primary);
+  color: white;
+  z-index: 9999;
+  font-weight: 600;
+}
+
+/* Animation classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays for grid items */
+.stagger-1 { transition-delay: 0ms; }
+.stagger-2 { transition-delay: 100ms; }
+.stagger-3 { transition-delay: 200ms; }
+.stagger-4 { transition-delay: 300ms; }
+.stagger-5 { transition-delay: 400ms; }
+.stagger-6 { transition-delay: 500ms; }
+.stagger-7 { transition-delay: 600ms; }
+.stagger-8 { transition-delay: 700ms; }
+.stagger-9 { transition-delay: 800ms; }
+.stagger-10 { transition-delay: 900ms; }
+.stagger-11 { transition-delay: 1000ms; }
+.stagger-12 { transition-delay: 1100ms; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Form styles */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(1, 148, 26, 0.1);
+}
+
+/* Button hover effects */
+.btn-hover-lift {
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
