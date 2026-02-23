@@ -14,7 +14,7 @@ export function NWWFooter() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Logo brand="nww" variant="white" size="lg" />
-            <p className="mt-4 text-gray-400 max-w-md">
+            <p className="mt-4 text-gray-300 max-w-md">
               {NWW_CONFIG.description}
             </p>
 
@@ -22,19 +22,19 @@ export function NWWFooter() {
             <div className="mt-6 space-y-3">
               <a
                 href={`mailto:${NWW_CONFIG.email}`}
-                className="flex items-center gap-3 text-gray-400 hover:text-[var(--nww-primary)] transition-colors"
+                className="flex items-center gap-3 text-gray-300 hover:text-[var(--nww-primary)] transition-colors"
               >
                 <Mail className="w-5 h-5" />
                 <span>{NWW_CONFIG.email}</span>
               </a>
               <a
                 href={`tel:${NWW_CONFIG.phone}`}
-                className="flex items-center gap-3 text-gray-400 hover:text-[var(--nww-primary)] transition-colors"
+                className="flex items-center gap-3 text-gray-300 hover:text-[var(--nww-primary)] transition-colors"
               >
                 <Phone className="w-5 h-5" />
                 <span>{NWW_CONFIG.phone}</span>
               </a>
-              <div className="flex items-center gap-3 text-gray-400">
+              <div className="flex items-center gap-3 text-gray-300">
                 <MapPin className="w-5 h-5" />
                 <span>{NWW_CONFIG.location}</span>
               </div>
@@ -53,7 +53,7 @@ export function NWWFooter() {
                   rel="noopener noreferrer"
                   className="
                     w-10 h-10 rounded-full
-                    bg-gray-800 hover:bg-[var(--nww-primary)]
+                    bg-gray-700 hover:bg-[var(--nww-primary)]
                     flex items-center justify-center
                     transition-colors duration-200
                     hover:text-[var(--nww-text)]
@@ -74,7 +74,7 @@ export function NWWFooter() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-[var(--nww-primary)] transition-colors duration-200"
+                    className="text-gray-300 hover:text-[var(--nww-primary)] transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -88,7 +88,7 @@ export function NWWFooter() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-[var(--nww-primary)] transition-colors duration-200"
+                    className="text-gray-300 hover:text-[var(--nww-primary)] transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -105,7 +105,7 @@ export function NWWFooter() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-[var(--nww-primary)] transition-colors duration-200"
+                    className="text-gray-300 hover:text-[var(--nww-primary)] transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -116,8 +116,8 @@ export function NWWFooter() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="py-6 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-gray-400 text-sm">
+        <div className="py-6 border-t border-gray-700 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-gray-300 text-sm">
             &copy; {currentYear} {NWW_CONFIG.name}. All rights reserved.
           </p>
           <p className="text-gray-500 text-sm">

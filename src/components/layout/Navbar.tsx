@@ -84,7 +84,7 @@ export function Navbar() {
                 lg:hidden p-2 rounded-lg transition-colors
                 ${isScrolled ? 'text-white hover:bg-white/10' : 'text-[var(--color-text)] hover:bg-gray-100'}
               `}
-              aria-label="Open menu"
+              aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMobileMenuOpen}
             >
               <Menu className="w-6 h-6" />

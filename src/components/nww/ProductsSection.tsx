@@ -71,7 +71,7 @@ export function ProductsSection() {
                     btn-hover-lift
                   "
                 >
-                  Learn More
+                  Learn More About ClubCaddy
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

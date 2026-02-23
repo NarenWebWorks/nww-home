@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { NWW_CONFIG, CLUBCADDY_CONFIG } from '@/lib/constants';
+import { NWW_CONFIG } from '@/lib/constants';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = NWW_CONFIG.url;

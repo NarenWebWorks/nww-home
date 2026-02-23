@@ -10,6 +10,9 @@ const montserrat = Montserrat({
   subsets: ['latin'],
   display: 'swap',
   weight: ['400', '500', '600', '700', '800'],
+  preload: true,
+  fallback: ['system-ui', 'sans-serif'],
+  adjustFontFallback: true, // Reduces CLS by matching fallback metrics
 });
 
 const sourceSans = Source_Sans_3({
@@ -17,6 +20,9 @@ const sourceSans = Source_Sans_3({
   subsets: ['latin'],
   display: 'swap',
   weight: ['400', '500', '600', '700'],
+  preload: true,
+  fallback: ['system-ui', 'sans-serif'],
+  adjustFontFallback: true, // Reduces CLS by matching fallback metrics
 });
 
 export const metadata: Metadata = {
