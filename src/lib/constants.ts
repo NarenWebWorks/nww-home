@@ -5,7 +5,7 @@ export const NWW_CONFIG = {
   tagline: 'Building Digital Products That Work',
   description:
     'NarenWebWorks is a freelance software engineering brand specializing in custom software consultancy, web & mobile development, and cloud solutions.',
-  url: 'https://www.narenwebworks.com',
+  url: 'https://www.narenwebworks.in',
   email: 'hello@narenwebworks.in',
   phone: '+919384878306',
   location: 'Chennai, India',

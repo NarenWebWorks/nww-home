@@ -2,7 +2,7 @@
 
 Dual-brand static marketing site built with Next.js 16 App Router.
 
-- **`/`** — [NarenWebWorks](https://www.narenwebworks.com) — freelance software consultancy
+- **`/`** — [NarenWebWorks](https://www.narenwebworks.in) — freelance software consultancy
 - **`/clubcaddy`** — [ClubCaddy](https://www.narenwebworks.in/clubcaddy/) — golf club management SaaS
 
 ## Tech Stack
